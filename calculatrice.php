@@ -21,7 +21,6 @@
     <br>
     <input type="submit" value="Calculer ">
   </form>
-
   <?php  ?>
 </body>
 </html>
