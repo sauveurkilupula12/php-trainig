@@ -2,6 +2,10 @@
 
 include 'team.php';
 
+/**
+ * @Autor Sauveur
+ */
+
 $paris = new Team("Paris Saint-Germain", "Mauricio Pochettino", "Parc des Princes", "Paris");
 $barcelone = new Team("FC Barcelone", "Xavi Hernandez", "Camp Nou", "Barcelone");
 
