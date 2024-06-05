@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les heures supplémentaires</title>
-</head>
-<body>
-    <h1>Les heures supplémentaires</h1>
-    <form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post">
-        <label for="salaireHoraire">Salaire horaire (FC):</label>
-        <input type="number" step="0.01" id="salaireHoraire" name="salaireHoraire" required>
-        <br>
-        <label for="nbHeuresSemaine">Nombre d'heures travaillées en semaine:</label>
-        <input type="number" id="nbHeuresSemaine" name="nbHeuresSemaine" required>
-        <br>
-        <label for="nbHeuresWeekend">Nombre d'heures travaillées le week-end:</label>
-        <input type="number" id="nbHeuresWeekend" name="nbHeuresWeekend" required>
-        <br>
-        <br>
-        <input type="submit" value="Calculer">
-    </form>
-
-    <?php
+<?php
         if (isset($_POST['salaireHoraire']) && isset($_POST['nbHeuresSemaine']) && isset($_POST['nbHeuresWeekend'])) {
             $salaireHoraire = floatval($_POST['salaireHoraire']);
             $nbHeuresSemaine = intval($_POST['nbHeuresSemaine']);
@@ -49,6 +26,28 @@
             echo "<p>Salaire des heures supplémentaires le week-end: " . number_format($salaireSuppWeekend, 2, '.', '') . " FC</p>"; 
             echo "<p>Salaire total: " . number_format($salaireTotal, 2, '.', '') . " FC</p>"; 
         }
-    ?>
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les heures supplémentaires</title>
+</head>
+<body>
+    <h1>Les heures supplémentaires</h1>
+    <form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post">
+        <label for="salaireHoraire">Salaire horaire (FC):</label>
+        <input type="number" step="0.01" id="salaireHoraire" name="salaireHoraire" required>
+        <br>
+        <label for="nbHeuresSemaine">Nombre d'heures travaillées en semaine:</label>
+        <input type="number" id="nbHeuresSemaine" name="nbHeuresSemaine" required>
+        <br>
+        <label for="nbHeuresWeekend">Nombre d'heures travaillées le week-end:</label>
+        <input type="number" id="nbHeuresWeekend" name="nbHeuresWeekend" required>
+        <br>
+        <br>
+        <input type="submit" value="Calculer">
+    </form>
 </body>
 </html>
